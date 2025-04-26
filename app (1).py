@@ -5,7 +5,7 @@ st.set_page_config(page_title="Kalkulator pH & pOH", layout="centered")
 
 # Title
 st.title("🧪 Kalkulator pH & pOH Larutan kimia")
-st.header("_kalkulator_ is :blue[cool] :star sunglasses:")
+st.header("_kalkulator_ is :blue[cool] :🤩:")
 
 # Description
 st.write("""
