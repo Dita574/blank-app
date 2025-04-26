@@ -5,6 +5,7 @@ st.set_page_config(page_title="Kalkulator pH & pOH", layout="centered")
 
 # Title
 st.title("🧪 Kalkulator pH & pOH Larutan")
+st.header("_Streamlit_ is :blue[cool] :sunglasses:")
 
 # Description
 st.write("""
