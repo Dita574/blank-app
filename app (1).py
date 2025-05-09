@@ -15,9 +15,11 @@ Kalkulator ini membantu menghitung titik sampling yang diperlukan pada cerobong 
 # Sidebar for input
 with st.sidebar:
     st.header("Input Parameter")
-    number = st.number_input(
+    namber = st.number_input(
     "DIameter Cerobong", value=None, placeholder="Type a number...")
-st.write("The current number is ", number)
+    nimber = st.number_input(
+    "Panjang Nipple", value=None, placeholder="Type a number...")
+
 
 
 # Divider
