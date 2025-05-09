@@ -1,6 +1,3 @@
-'''import streamlit as st
-import math'''
-
 st.set_page_config(page_title="Metode 1 Isokinetik Pada Emisi Tidak Bergerak", layout="centered")
 
 # Title
