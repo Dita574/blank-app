@@ -32,7 +32,7 @@ st.markdown("---")
 
 if st.button("Hitung Titik yang Akan Disampling"):
     if xx (nember=2, nomber=8) :
-        Titik yang akan disampling = 8
+        print ("Titik yang akan disampling = 8")
         
     else:
         pOH = -math.log10(concentration)
