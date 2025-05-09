@@ -32,14 +32,14 @@ st.markdown("---")
 
 if st.button("Hitung Titik yang Akan Disampling"):
     if nember==2:
-        x =8
+        x ='8'
         
         
-    else: oh
+ '''  else: oh
         pOH = -math.log10(concentration)
         pH = 14 - pOH
 
-'''    if pH < 7:
+   if pH < 7:
         sifat = "Asam"
         sifat_desc = "Asam berarti larutan memiliki ion H⁺ yang lebih banyak daripada OH⁻."
     elif pH == 7:
