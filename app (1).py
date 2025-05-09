@@ -19,7 +19,10 @@ with st.sidebar:
     "DIameter Cerobong", value=None, placeholder="Type a number...")
     nimber = st.number_input(
     "Panjang Nipple", value=None, placeholder="Type a number...")
-
+    number = st.number_input(
+    "", value=None, placeholder="Type a number...")
+    nember = st.number_input(
+    "", value=None, placeholder="Type a number...")
 
 
 # Divider
