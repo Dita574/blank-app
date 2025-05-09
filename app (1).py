@@ -31,34 +31,31 @@ with st.sidebar:
 st.markdown("---")
 
 if st.button("Hitung Titik yang Akan Disampling"):
-    if nember==2:
-        x ='8'
-        
-        
- '''  else: oh
-        pOH = -math.log10(concentration)
-        pH = 14 - pOH
-
-   if pH < 7:
-        sifat = "Asam"
-        sifat_desc = "Asam berarti larutan memiliki ion H⁺ yang lebih banyak daripada OH⁻."
-    elif pH == 7:
-        sifat = "Netral"
-        sifat_desc = "Larutan netral memiliki konsentrasi ion H⁺ dan OH⁻ yang seimbang."
+    def hitung_titik_sampling(diameter, jumlah_lubang):
+    if jumlah_lubang == 1:
+        posisi = [diameter / 2]
+    elif jumlah_lubang == 2:
+        posisi = [diameter * 0.25, diameter * 0.75]
+    elif jumlah_lubang == 4:
+        posisi = [diameter * 0.125, diameter * 0.375, diameter * 0.625, diameter * 0.875]
     else:
-        sifat = "Basa"
-        sifat_desc = "Basa berarti larutan memiliki ion OH⁻ yang lebih banyak daripada H⁺."
+        return "Jumlah lubang harus 1, 2, atau 4."
+        return posisi
 
-    if pH < 4:
-        indikator = "Metil Merah"
-    elif 4 <= pH < 7:
-        indikator = "Bromtimol Biru"
-    elif 7 <= pH < 10:
-        indikator = "Fenolftalein"
-    else:
-        indikator = "Lakmus Biru"
+# Contoh input
+diameter = float(input("Masukkan diameter cerobong (m): "))
+jumlah_lubang = int(input("Masukkan jumlah lubang (1, 2, atau 4): "))
+titik = hitung_titik_sampling(diameter, jumlah_lubang)
 
-    st.success(f"pH: {pH:.2f}")
+print("Titik sampling dari ujung nozzle (m):")
+for t in titik:
+    print(round(t, 3))
+
+
+        
+    
+
+'''  st.success(f"pH: {pH:.2f}")
     st.info(f"pOH: {pOH:.2f}")
     st.warning(f"Sifat larutan: {sifat}")
     st.caption(sifat_desc)
