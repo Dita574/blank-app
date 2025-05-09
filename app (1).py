@@ -31,8 +31,9 @@ with st.sidebar:
 st.markdown("---")
 
 if st.button("Hitung Titik yang Akan Disampling"):
-    if A (nember=2, nomber=8) :
-        print (A ("Titik yang akan disampling = 8"))
+    if Titik_yang_akan_disampling (nember=2, nomber=10) :
+        x = "8"
+        
         
     else:
         pOH = -math.log10(concentration)
