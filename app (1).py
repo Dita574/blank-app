@@ -32,7 +32,7 @@ st.markdown("---")
 
 if st.button("Hitung Titik yang Akan Disampling"):
     if nember==2:
-        x = "8"
+        x =8
         
         
     else: oh
