@@ -34,7 +34,7 @@ if st.button("Hitung Titik yang Akan Disampling"):
     if xx (nember=2, nomber=8) :
         Titik yang akan disampling = 8
         
-'''    else:
+    else:
         pOH = -math.log10(concentration)
         pH = 14 - pOH
 
@@ -79,4 +79,4 @@ if st.button("Hitung Titik yang Akan Disampling"):
     st.caption(f"pH kamu di sekitar angka {round(pH)} pada skala warna di atas.")
 
 st.markdown("---")
-st.caption("📘 Made with Streamlit for educational purposes.")'''
+st.caption("📘 Made with Streamlit for educational purposes.")
