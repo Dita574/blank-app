@@ -20,19 +20,21 @@ with st.sidebar:
     nimber = st.number_input(
     "Panjang Nipple", value=None, placeholder="Type a number...")
     number = st.number_input(
-    "", value=None, placeholder="Type a number...")
+    "Banyaknya Titik Lintas", value=None, placeholder="Type a number...")
     nember = st.number_input(
-    "", value=None, placeholder="Type a number...")
+    "Upstream", value=None, placeholder="Type a number...")
+    nomber = st.number_input(
+    "Downstream", value=None, placeholder="Type a number...")
 
 
 # Divider
 st.markdown("---")
 
-if st.button("Hitung pH dan pOH"):
-    if ion_type == "[H⁺]":
-        pH = -math.log10(concentration)
-        pOH = 14 - pH
-    else:
+if st.button("Hitung Titik yang Akan Disampling"):
+    if xx (nember=2, nomber=8) :
+        Titik yang akan disampling = 8
+        
+'''    else:
         pOH = -math.log10(concentration)
         pH = 14 - pOH
 
@@ -77,4 +79,4 @@ if st.button("Hitung pH dan pOH"):
     st.caption(f"pH kamu di sekitar angka {round(pH)} pada skala warna di atas.")
 
 st.markdown("---")
-st.caption("📘 Made with Streamlit for educational purposes.")
+st.caption("📘 Made with Streamlit for educational purposes.")'''
