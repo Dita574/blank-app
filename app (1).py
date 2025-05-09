@@ -35,11 +35,11 @@ if st.button("Hitung Titik yang Akan Disampling"):
         x = "8"
         
         
-    else:
+    else: oh
         pOH = -math.log10(concentration)
         pH = 14 - pOH
 
-    if pH < 7:
+'''    if pH < 7:
         sifat = "Asam"
         sifat_desc = "Asam berarti larutan memiliki ion H⁺ yang lebih banyak daripada OH⁻."
     elif pH == 7:
@@ -80,4 +80,4 @@ if st.button("Hitung Titik yang Akan Disampling"):
     st.caption(f"pH kamu di sekitar angka {round(pH)} pada skala warna di atas.")
 
 st.markdown("---")
-st.caption("📘 Made with Streamlit for educational purposes.")
+st.caption("📘 Made with Streamlit for educational purposes.")'''
