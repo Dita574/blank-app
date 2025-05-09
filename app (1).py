@@ -5,7 +5,7 @@ st.set_page_config(page_title="Metode 1 Isokinetik Pada Emisi Tidak Bergerak", l
 
 # Title
 st.title("📏Kalkulator Titik Sampling Pada Emisi Tidak Bergerak💨")
-st.header("_Metode 1_ is :blue[cool]")
+st.header(":blue[Metode 1]")
 
 # Description
 st.write("""
