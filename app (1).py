@@ -15,7 +15,7 @@ Kalkulator ini membantu menghitung titik sampling yang diperlukan pada cerobong 
 # Sidebar for input
 with st.sidebar:
     st.header("Input Parameter")
-    number1 = st.number_input(
+    number = st.number_input(
     "DIameter Cerobong", value=None, placeholder="Type a number...")
 st.write("The current number is ", number)
 
