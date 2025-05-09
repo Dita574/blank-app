@@ -31,7 +31,7 @@ with st.sidebar:
 st.markdown("---")
 
 if st.button("Hitung Titik yang Akan Disampling"):
-    if Titik_yang_akan_disampling (nember=2, nomber=10) :
+    if nember=2, nomber=10:
         x = "8"
         
         
