@@ -15,10 +15,13 @@ Kalkulator ini membantu menghitung titik sampling yang diperlukan pada cerobong 
 # Sidebar for input
 with st.sidebar:
     st.header("Input Parameter")
-    ion_type = st.radio("Pilih jenis ion yang diketahui:", ("[H⁺]", "[OH⁻]"))
-    concentration = st.number_input(f"Masukkan konsentrasi {ion_type} (mol/L):", min_value=1e-14, max_value=1.0, format="%.2e")
-
-
+    number1 = st.number_input(
+    "DIameter Cerobong", value=None, placeholder="Type a number...")
+st.write("The current number is ", number)
+    number2 = st.number_input(
+    "Panjang Nipple", value=None, placeholder="Type a number..."
+)
+st.write("The current number is ", number)
 # Divider
 st.markdown("---")
 
