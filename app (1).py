@@ -1,11 +1,11 @@
-import streamlit as st
-import math
+'''import streamlit as st
+import math'''
 
-st.set_page_config(page_title="Kalkulator pH & pOH", layout="centered")
+st.set_page_config(page_title="Metode 1 Isokinetik Pada Emisi Tidak Bergerak", layout="centered")
 
 # Title
-st.title("🧪 Kalkulator pH & pOH Larutan kimia")
-st.header("_kalkulator_ is :blue[cool] :🤩:")
+st.title("📏Kalkulator Titik Sampling Pada Emisi Tidak Bergerak💨")
+st.header("_Metode 1_ is :blue[cool]")
 
 # Description
 st.write("""
