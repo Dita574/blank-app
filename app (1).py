@@ -50,7 +50,7 @@ if st.button("Hitung"):
         print("titik = 24 #Kondisi terburuk")
 
 st.write(f"• Diameter cerobong: {D} m → Gunakan {titik} titik sampling")
-    st.write(f"• Jumlah lubang sampling: {n_lubang}")
+st.write(f"• Jumlah lubang sampling: {n_lubang}")
 
     if n_lubang == 1:
         st.info("Ambil semua titik dari 1 sisi.")
