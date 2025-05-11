@@ -21,7 +21,7 @@ with st.sidebar:
     "Panjang Nipple", value=None, placeholder="Type a number...")
     number = st.number_input(
     "Banyaknya Titik Lintas", value=None, placeholder="Type a number...")
-    nember = st.number_input(
+    nember = st.selectbox("Jumlah lubang yang disampling", [1,2,4])
     "Upstream", value=None, placeholder="Type a number...")
     nomber = st.number_input(
     "Downstream", value=None, placeholder="Type a number...")
