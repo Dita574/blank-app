@@ -13,7 +13,7 @@ Kalkulator ini membantu menghitung titik sampling yang diperlukan pada cerobong 
 """)
 
 # Sidebar for input
-with st.sidebar:
+'''with st.sidebar:
     st.header("Input Parameter")
     namber = st.number_input(
     "DIameter Cerobong", value=None, placeholder="Type a number...")
@@ -24,8 +24,14 @@ with st.sidebar:
     nember = st.number_input(
     "Upstream", value=None, placeholder="Type a number...")
     nomber = st.number_input(
-    "Downstream", value=None, placeholder="Type a number...")
-
+    "Downstream", value=None, placeholder="Type a number...")'''
+with st.sidebar:
+    st.header("Parameter Cerobong")
+    diameter = st.number_input("Diameter cerobong (m):", min_value=0.1, step=0.01)
+    upstream = st.number_input("Jarak gangguan hulu (m):", min_value=0.0, step=0.1)
+    downstream = st.number_input("Jarak gangguan hilir (m):", min_value=0.0, step=0.1)
+    lubang = st.selectbox("Jumlah lubang sampling:", [1, 2, 4])
+    
 # Divider
 st.markdown("---")
 
