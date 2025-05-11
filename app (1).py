@@ -18,7 +18,7 @@ with st.sidebar:
     diameter = st.number_input("Diameter cerobong (m):")
     upstream = st.number_input("Jarak gangguan hulu (m):")
     downstream = st.number_input("Jarak gangguan hilir (m):")
-    lubang = st.number_input("Jumlah lubang sampling:"[1, 2, 4])
+    lubang = st.number_input("Jumlah lubang sampling:")
     
 # Divider
 st.markdown("---")
