@@ -30,8 +30,37 @@ with st.sidebar:
 # Divider
 st.markdown("---")
 
-if st.button("Hitung pH dan pOH"):
-    if ion_type == "[H⁺]":
+if st.button("Hitung"):
+    # Syarat lurusan
+    Syarat_Upstream = 8*D
+    Syarat_Downstream = 2*D
+
+    hasil_up = "Memenuhi" if upstream >= syarat_up else "Tidak Memenuhi"
+    hasil_down = "Memenuhi" if downstream >= syarat_down else "Tidak Memenuhi"
+
+    st.subheader("Hasil Evaluasi Lurusan:")
+    st.write(f"• Panjang gangguan hulu: {upstream} m → {hasil_up} (min: {syarat_up:.2f} m)")
+    st.write(f"• Panjang gangguan hilir: {downstream} m → {hasil_down} (min: {syarat_down:.2f} m)")
+
+    st.subheader("Konfigurasi Titik Sampling:")
+    if D < 0.3:
+        titik = 6
+    elif D < 1:
+        titik = 12
+    else:
+        titik = 24
+
+st.write(f"• Diameter cerobong: {D} m → Gunakan {titik} titik sampling")
+    st.write(f"• Jumlah lubang sampling: {n_lubang}")
+
+    if n_lubang == 1:
+        st.info("Ambil semua titik dari 1 sisi.")
+    elif n_lubang == 2:
+        st.info("Ambil titik dari sisi berlawanan (180°).")
+    elif n_lubang == 4:
+        st.info("Ambil titik dari 4 sisi (90° per lubang).")
+        
+ '''   if ion_type == "[H⁺]":
         pH = -math.log10(concentration)
         pOH = 14 - pH
     else:
@@ -79,7 +108,7 @@ if st.button("Hitung pH dan pOH"):
     st.caption(f"pH kamu di sekitar angka {round(pH)} pada skala warna di atas.")
 
 st.markdown("---")
-st.caption("📘 Made with Streamlit for educational purposes.")
+st.caption("📘 Made with Streamlit for educational purposes.")'''
 
 
 
