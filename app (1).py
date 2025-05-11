@@ -50,11 +50,11 @@ if st.button("Hitung"):
 
     st.subheader("Konfigurasi Titik Sampling:")
     if D < 0.3:
-        print ("titik = 6")
+        titik = 6
     elif D < 1:
-        print ("titik = 12")
+        titik = 12
     else:
-        print ("titik = 24")
+        titik = 24
 
 st.write(f"• Diameter cerobong: {D} m → Gunakan {titik} titik sampling")
     st.write(f"• Jumlah lubang sampling: {n_lubang}")
