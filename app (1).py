@@ -26,36 +26,48 @@ with st.sidebar:
     nomber = st.number_input(
     "Downstream", value=None, placeholder="Type a number...")
 
+# Apply dark mode
+if show_dark_mode:
+    st.markdown(
+        """
+        <style>
+            body { background-color: #1e1e1e; color: white; }
+            .stApp { background-color: #1e1e1e; }
+        </style>
+        """, unsafe_allow_html=True
+    )
 
 # Divider
 st.markdown("---")
 
-if st.button("Hitung Titik yang Akan Disampling"):
-    def hitung_titik_sampling(diameter, jumlah_lubang):
-    if jumlah_lubang == 1:
-        posisi = [diameter / 2]
-    elif jumlah_lubang == 2:
-        posisi = [diameter * 0.25, diameter * 0.75]
-    elif jumlah_lubang == 4:
-        posisi = [diameter * 0.125, diameter * 0.375, diameter * 0.625, diameter * 0.875]
+if st.button("Hitung pH dan pOH"):
+    if ion_type == "[H⁺]":
+        pH = -math.log10(concentration)
+        pOH = 14 - pH
     else:
-        return "Jumlah lubang harus 1, 2, atau 4."
-        return posisi
+        pOH = -math.log10(concentration)
+        pH = 14 - pOH
 
-# Contoh input
-diameter = float(input("Masukkan diameter cerobong (m): "))
-jumlah_lubang = int(input("Masukkan jumlah lubang (1, 2, atau 4): "))
-titik = hitung_titik_sampling(diameter, jumlah_lubang)
+    if pH < 7:
+        sifat = "Asam"
+        sifat_desc = "Asam berarti larutan memiliki ion H⁺ yang lebih banyak daripada OH⁻."
+    elif pH == 7:
+        sifat = "Netral"
+        sifat_desc = "Larutan netral memiliki konsentrasi ion H⁺ dan OH⁻ yang seimbang."
+    else:
+        sifat = "Basa"
+        sifat_desc = "Basa berarti larutan memiliki ion OH⁻ yang lebih banyak daripada H⁺."
 
-print("Titik sampling dari ujung nozzle (m):")
-for t in titik:
-    print(round(t, 3))
+    if pH < 4:
+        indikator = "Metil Merah"
+    elif 4 <= pH < 7:
+        indikator = "Bromtimol Biru"
+    elif 7 <= pH < 10:
+        indikator = "Fenolftalein"
+    else:
+        indikator = "Lakmus Biru"
 
-
-        
-    
-
-'''  st.success(f"pH: {pH:.2f}")
+    st.success(f"pH: {pH:.2f}")
     st.info(f"pOH: {pOH:.2f}")
     st.warning(f"Sifat larutan: {sifat}")
     st.caption(sifat_desc)
@@ -77,4 +89,7 @@ for t in titik:
     st.caption(f"pH kamu di sekitar angka {round(pH)} pada skala warna di atas.")
 
 st.markdown("---")
-st.caption("📘 Made with Streamlit for educational purposes.")'''
+st.caption("📘 Made with Streamlit for educational purposes.")
+
+
+
