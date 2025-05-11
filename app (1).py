@@ -12,11 +12,11 @@ st.write("""
 Kalkulator ini membantu menghitung titik sampling yang diperlukan pada cerobong dengan metode isokinetik
 """)
 
-# Sidebar for input
-'''with st.sidebar:
+'''# Sidebar for input
+with st.sidebar:
     st.header("Input Parameter")
     namber = st.number_input(
-    "DIameter Cerobong", value=None, placeholder="Type a number...")
+    "Diameter Cerobong", value=None, placeholder="Type a number...")
     nimber = st.number_input(
     "Panjang Nipple", value=None, placeholder="Type a number...")
     number = st.number_input(
@@ -27,9 +27,9 @@ Kalkulator ini membantu menghitung titik sampling yang diperlukan pada cerobong 
     "Downstream", value=None, placeholder="Type a number...")'''
 with st.sidebar:
     st.header("Parameter Cerobong")
-    diameter = st.number_input("Diameter cerobong (m):", min_value=0.1, step=0.01)
-    upstream = st.number_input("Jarak gangguan hulu (m):", min_value=0.0, step=0.1)
-    downstream = st.number_input("Jarak gangguan hilir (m):", min_value=0.0, step=0.1)
+    diameter = st.number_input("Diameter cerobong (m):")
+    upstream = st.number_input("Jarak gangguan hulu (m):")
+    downstream = st.number_input("Jarak gangguan hilir (m):")
     lubang = st.number_input("Jumlah lubang sampling:")
     
 # Divider
