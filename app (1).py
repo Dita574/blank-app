@@ -29,36 +29,32 @@ with st.sidebar:
 # Divider
 st.markdown("---")
 
-if st.button("Hitung"):
-    # Syarat lurusan
-    syarat_up = 8 * D
-    syarat_down = 2 * D
+if st.button("Hitung Titik Sampling"):
+    A = upstream / diameter  # dalam satuan D
+    B = downstream / diameter
 
-    hasil_up = "Memenuhi" if upstream >= syarat_up else "Tidak Memenuhi"
-    hasil_down = "Memenuhi" if downstream >= syarat_down else "Tidak Memenuhi"
-
-    st.subheader("Hasil Evaluasi Lurusan:")
-    st.write(f"• Panjang gangguan hulu: {upstream} m → {hasil_up} (min: {syarat_up:.2f} m)")
-    st.write(f"• Panjang gangguan hilir: {downstream} m → {hasil_down} (min: {syarat_down:.2f} m)")
-
-    st.subheader("Konfigurasi Titik Sampling:")
-    if D < 0.3:
-        titik = 6
-    elif D < 1:
+    # Logika penentuan jumlah titik dari grafik
+    if A >= 2.5 and B >= 7:
         titik = 12
-    else: 
-        print("titik = 24 #Kondisi terburuk")
+    elif A >= 2 and B >= 5:
+        titik = 16
+    elif A >= 1.5 and B >= 4:
+        titik = 20
+    elif A >= 1 and B >= 3:
+        titik = 24
+    else:
+        titik = 24  # kondisi terburuk
 
-st.write(f"• Diameter cerobong: {D} m → Gunakan {titik} titik sampling")
-st.write(f"• Jumlah lubang sampling: {n_lubang}")
+    st.success(f"Jumlah titik sampling minimum: {titik} titik")
 
-    if n_lubang == 1:
-        st.info("Ambil semua titik dari 1 sisi.")
-    elif n_lubang == 2:
-        st.info("Ambil titik dari sisi berlawanan (180°).")
-    elif n_lubang == 4:
-        st.info("Ambil titik dari 4 sisi (90° per lubang).")
-    
-
-
-
+    st.subheader("📌 Konfigurasi Lubang Sampling")
+    if lubang == 1:
+        st.info("Semua titik diambil dari satu sisi.")
+    elif lubang == 2:
+        st.info("Titik diambil dari dua sisi yang berseberangan (180°).")
+    else:
+        st.info("Titik diambil dari empat sisi
+                
+st.markdown("---")
+st.caption("📘 Perhitungan berdasarkan pendekatan grafik standar EPA Method 1.")
+                
