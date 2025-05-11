@@ -66,7 +66,8 @@ st.write(f"• Jumlah lubang sampling: {n_lubang}")
         st.info("Ambil titik dari sisi berlawanan (180°)")
     elif n_lubang == 4:
         st.info("Ambil titik dari 4 sisi (90° per lubang)")'''
-        
+
+if st.button("Hitung"):        
     if ion_type == "[H⁺]":
         pH = -math.log10(concentration)
         pOH = 14 - pH
