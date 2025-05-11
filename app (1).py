@@ -11,7 +11,7 @@ st.header(":blue[Metode 1]")
 st.write("""
 Kalkulator ini membantu menghitung titik sampling yang diperlukan pada cerobong dengan metode isokinetik
 """)
-'''
+
 # Sidebar for input
 with st.sidebar:
     st.header("Input Parameter")
@@ -25,18 +25,18 @@ with st.sidebar:
     "Upstream", value=None, placeholder="Type a number...")
     nomber = st.number_input(
     "Downstream", value=None, placeholder="Type a number...")
-'''
-# Input
+
+'''# Input
 D = st.number_input("Diameter cerobong (meter):")
 L = st.number_input("Panjang nipple / pipa lurus (meter):")
 n_lubang = st.selectbox("Jumlah lubang sampling:", [1, 2, 4])
 upstream = st.number_input("Gangguan hulu (meter):")
-downstream = st.number_input("Gangguan hilir (meter):")
+downstream = st.number_input("Gangguan hilir (meter):")'''
 
-'''# Divider
-st.markdown("---")'''
+# Divider
+st.markdown("---")
 
-if st.button("Hitung"):
+'''if st.button("Hitung"):
     # Syarat lurusan
     Syarat_Upstream = 8*D
     Syarat_Downstream = 2*D
@@ -65,7 +65,7 @@ st.write(f"• Jumlah lubang sampling: {n_lubang}")
     elif n_lubang == 2:
         st.info("Ambil titik dari sisi berlawanan (180°)")
     elif n_lubang == 4:
-        st.info("Ambil titik dari 4 sisi (90° per lubang)")
+        st.info("Ambil titik dari 4 sisi (90° per lubang)")'''
         
  '''   if ion_type == "[H⁺]":
         pH = -math.log10(concentration)
