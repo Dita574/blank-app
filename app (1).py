@@ -50,7 +50,7 @@ if st.button("Hitung"):
 
     st.subheader("Konfigurasi Titik Sampling:")
     if D < 0.3:
-        print ("titik = 6)
+        print ("titik = 6")
     elif D < 1:
         print ("titik = 12")
     else:
