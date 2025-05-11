@@ -56,9 +56,8 @@ if st.button("Hitung"):
 
     
 st.write(f"• Diameter cerobong: {D} m → Gunakan {titik} titik sampling")
-'''st.write(f"• Jumlah lubang sampling: {n_lubang}")'''
+st.write(f"• Jumlah lubang sampling: {n_lubang}")
 
-    n_lubang = st.selectbox("Jumlah lubang sampling", [1, 2, 4])
     if n_lubang == 1:
         st.info("Ambil semua titik dari 1 sisi")
     elif n_lubang == 2:
