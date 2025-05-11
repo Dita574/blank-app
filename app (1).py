@@ -26,46 +26,8 @@ with st.sidebar:
     nomber = st.number_input(
     "Downstream", value=None, placeholder="Type a number...")
 
-'''# Input
-D = st.number_input("Diameter cerobong (meter):")
-L = st.number_input("Panjang nipple / pipa lurus (meter):")
-n_lubang = st.selectbox("Jumlah lubang sampling:", [1, 2, 4])
-upstream = st.number_input("Gangguan hulu (meter):")
-downstream = st.number_input("Gangguan hilir (meter):")'''
-
 # Divider
 st.markdown("---")
-
-'''if st.button("Hitung"):
-    # Syarat lurusan
-    Syarat_Upstream = 8*D
-    Syarat_Downstream = 2*D
-
-    hasil_up = "Memenuhi" if upstream >= syarat_up else "Tidak Memenuhi"
-    hasil_down = "Memenuhi" if downstream >= syarat_down else "Tidak Memenuhi"
-
-    st.subheader("Hasil Evaluasi Lurusan:")
-    st.write(f"• Panjang gangguan hulu: {upstream} m → {hasil_up} (min: {syarat_up:.2f} m)")
-    st.write(f"• Panjang gangguan hilir: {downstream} m → {hasil_down} (min: {syarat_down:.2f} m)")
-
-    st.subheader("Konfigurasi Titik Sampling:")
-    if D < 0.3:
-        titik = 6
-    elif D < 1:
-        titik = 12
-    else : 
-        titik = 24
-        
-    
-st.write(f"• Diameter cerobong: {D} m → Gunakan {titik} titik sampling")
-st.write(f"• Jumlah lubang sampling: {n_lubang}")
-
-    if n_lubang == 1:
-        st.info("Ambil semua titik dari 1 sisi")
-    elif n_lubang == 2:
-        st.info("Ambil titik dari sisi berlawanan (180°)")
-    elif n_lubang == 4:
-        st.info("Ambil titik dari 4 sisi (90° per lubang)")'''
 
 if st.button("Hitung"):        
     if ion_type == "[H⁺]":
