@@ -33,8 +33,8 @@ n_lubang = st.selectbox("Jumlah lubang sampling:", [1, 2, 4])
 upstream = st.number_input("Gangguan hulu (meter):")
 downstream = st.number_input("Gangguan hilir (meter):")
 
-# Divider
-st.markdown("---")
+'''# Divider
+st.markdown("---")'''
 
 if st.button("Hitung"):
     # Syarat lurusan
@@ -53,7 +53,9 @@ if st.button("Hitung"):
         titik = 6
     elif D < 1:
         titik = 12
-
+    else : 
+        titik = 24
+        
     
 st.write(f"• Diameter cerobong: {D} m → Gunakan {titik} titik sampling")
 st.write(f"• Jumlah lubang sampling: {n_lubang}")
