@@ -53,7 +53,7 @@ if st.button("Hitung Titik Sampling"):
     elif lubang == 2:
         st.info("Titik diambil dari dua sisi yang berseberangan (180°).")
     else:
-        st.info("Titik diambil dari empat sisi
+        st.info("Titik diambil dari empat sisi (setiap 90°).")
                 
 st.markdown("---")
 st.caption("📘 Perhitungan berdasarkan pendekatan grafik standar EPA Method 1.")
