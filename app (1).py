@@ -12,8 +12,8 @@ st.write("""
 Kalkulator ini membantu menghitung titik sampling yang diperlukan pada cerobong dengan metode isokinetik
 """)
 
-'''# Sidebar for input
-with st.sidebar:
+# Sidebar for input
+'''with st.sidebar:
     st.header("Input Parameter")
     namber = st.number_input(
     "Diameter Cerobong", value=None, placeholder="Type a number...")
