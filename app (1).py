@@ -53,16 +53,17 @@ if st.button("Hitung"):
         titik = 6
     elif D < 1:
         titik = 12
- 
+    else:
+        titik = 24
     
 st.write(f"• Diameter cerobong: {D} m → Gunakan {titik} titik sampling")
 st.write(f"• Jumlah lubang sampling: {n_lubang}")
 
-    if n_lubang == 1:
+    if n_lubang == "[1]":
         st.info("Ambil semua titik dari 1 sisi.")
-    elif n_lubang == 2:
+    elif n_lubang == "[2]":
         st.info("Ambil titik dari sisi berlawanan (180°).")
-    elif n_lubang == 4:
+    elif n_lubang == "[4]":
         st.info("Ambil titik dari 4 sisi (90° per lubang).")
         
  '''   if ion_type == "[H⁺]":
