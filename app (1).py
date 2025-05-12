@@ -9,46 +9,44 @@ st.header(":blue[Metode 1]")
 
 # Description
 st.write("""
-Kalkulator ini membantu menghitung titik sampling yang diperlukan pada cerobong dengan metode isokinetik
+Aplikasi ini membantu menghitung titik sampling pada cerobong untuk metode isokinetik berdasarkan jumlah titik lintas dan diameter cerobong.
 """)
 
 # Sidebar for input
 with st.sidebar:
-    st.header("Parameter Cerobong")
-    diameter = st.number_input("Diameter cerobong (m):")
-    upstream = st.number_input("Jarak gangguan hulu (m):")
-    downstream = st.number_input("Jarak gangguan hilir (m):")
-    lubang = st.number_input("Jumlah lubang sampling:")
-    
+    st.header("Input Parameter")
+    diameter = st.number_input("Diameter Cerobong (m)", min_value=1.0, step=0.1)
+    jumlah_titik = st.number_input("Jumlah Titik Lintas", min_value=1, step=1)
+    panjang_nipple = st.number_input("Panjang Nipple (m)", min_value=0.0, step=0.1)
+    upstream = st.number_input("Jarak Upstream (m)", min_value=0.0, step=0.1)
+    downstream = st.number_input("Jarak Downstream (m)", min_value=0.0, step=0.1)
+
 # Divider
 st.markdown("---")
 
+# Tombol untuk menghitung
 if st.button("Hitung Titik Sampling"):
-    A = upstream / diameter  # dalam satuan D
-    B = downstream / diameter
+    if diameter and jumlah_titik:
+        radius = diameter / 2
+        st.subheader("📍 Titik Sampling yang Direkomendasikan")
+        st.write(f"Diameter cerobong: **{diameter} m**")
+        st.write(f"Jumlah titik lintas: **{jumlah_titik} titik**")
 
-    # Logika penentuan jumlah titik dari grafik
-    if A >= 2.5 and B >= 7:
-        titik = 12
-    elif A >= 2 and B >= 5:
-        titik = 16
-    elif A >= 1.5 and B >= 4:
-        titik = 20
-    elif A >= 1 and B >= 3:
-        titik = 24
+        hasil = []
+        for i in range(1, int(jumlah_titik) + 1):
+            posisi = radius * math.sqrt((i - 0.5) / jumlah_titik)
+            jarak_dari_tepi = round(radius - posisi, 2)
+            hasil.append(jarak_dari_tepi)
+            st.write(f"Titik {i}: {jarak_dari_tepi} m dari tepi cerobong")
+
+    st.success("Perhitungan selesai.")
+
+        # Optional: Tampilkan tabel
+        st.subheader("📋 Tabel Titik Sampling")
+        st.table({f"Titik {i+1}": [f"{hasil[i]} m"] for i in range(len(hasil))})
     else:
-        titik = 24  # kondisi terburuk
+        st.error("Masukkan diameter dan jumlah titik yang valid.")
 
-    st.success(f"Jumlah titik sampling minimum: {titik} titik")
-
-    st.subheader("📌 Konfigurasi Lubang Sampling")
-    if lubang == 1:
-        st.info("Semua titik diambil dari satu sisi.")
-    elif lubang == 2:
-        st.info("Titik diambil dari dua sisi yang berseberangan (180°).")
-    else:
-        st.info("Titik diambil dari empat sisi (setiap 90°).")
-                
 st.markdown("---")
-st.caption("📘 Perhitungan berdasarkan pendekatan grafik standar EPA Method 1.")
-                
+st.caption("📘 Dibuat dengan Streamlit untuk simulasi edukatif metode sampling isokinetik.")
+
