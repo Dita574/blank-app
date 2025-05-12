@@ -41,7 +41,7 @@ if st.button("Hitung Titik Sampling"):
 
     st.success("Perhitungan selesai.")
 
-        # Optional: Tampilkan tabel
+# Optional: Tampilkan tabel
         st.subheader("📋 Tabel Titik Sampling")
         st.table({f"Titik {i+1}": [f"{hasil[i]} m"] for i in range(len(hasil))})
     else:
