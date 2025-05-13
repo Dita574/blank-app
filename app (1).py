@@ -12,9 +12,6 @@ st.write("""
 Aplikasi ini membantu menghitung titik sampling pada cerobong untuk metode isokinetik berdasarkan jumlah titik lintas dan diameter cerobong.
 """)
 
-#Lottie animations 
-Lottie_header = load_lottie_url(https://app.lottiefiles.com/animation/3936f08d-b903-4ee0-af76-17b4605d7253)
-
 # Sidebar for input
 with st.sidebar:
     st.header("Input Parameter")
